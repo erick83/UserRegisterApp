@@ -1,0 +1,15 @@
+{{ user$ | async | json }}
+<form [formGroup]="userForm">
+    <mat-form-field appearance="standard">
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="Nombre" formControlName="name">
+    </mat-form-field>
+    <mat-form-field appearance="standard">
+        <mat-label>Apellido</mat-label>
+        <input matInput placeholder="Nombre" formControlName="lastName">
+    </mat-form-field>
+    <mat-form-field appearance="standard">
+        <mat-label>Nota</mat-label>
+        <input matInput placeholder="Notas" formControlName="data">
+    </mat-form-field>
+</form>
