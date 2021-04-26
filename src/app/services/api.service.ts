@@ -27,4 +27,8 @@ export class ApiService {
   updateUser(user: IUser) {
     return this.http.put(this.baseUrl + '/api/User/' + user.id, user) as Observable<IUser>;
   }
+
+  deleteUser(id: number): Observable<IUser[]> {
+    return this.http.delete(this.baseUrl + '/api/User/' + id) as Observable<IUser[]>;
+  }
 }

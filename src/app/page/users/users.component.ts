@@ -12,9 +12,13 @@ export class UsersComponent implements OnInit {
 
   users$: Observable<IUser[]> = new Observable();
   displayedColumns: string[] = ['id', 'name', 'lastName', 'data'];
-  constructor(private apiService: ApiService) { }
+  constructor(private api: ApiService) { }
 
   ngOnInit(): void {
-    this.users$ = this.apiService.getUsers();
+    this.users$ = this.api.getUsers();
+  }
+
+  delete(id: number) {
+    this.users$ = this.api.deleteUser(id);
   }
 }
