@@ -1,5 +1,10 @@
-{{ user$ | async | json }}
-<form [formGroup]="userForm">
+
+<form [formGroup]="userForm" (submit)="submitHandler()">
+    <img *ngIf="photoURL !== ''" [src]="photoURL" alt="">
+    <mat-form-field appearance="standard">
+        <mat-label>Photo URL</mat-label>
+        <input matInput placeholder="Nombre" formControlName="photoURL">
+    </mat-form-field>
     <mat-form-field appearance="standard">
         <mat-label>Nombre</mat-label>
         <input matInput placeholder="Nombre" formControlName="name">
@@ -12,4 +17,6 @@
         <mat-label>Nota</mat-label>
         <input matInput placeholder="Notas" formControlName="data">
     </mat-form-field>
+    <button class="btn" type="submit" mat-raised-button color="primary">Guardar</button>
+    <a class="btn" routerLink="/users" mat-raised-button color="default">Cancelar</a>
 </form>

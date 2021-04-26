@@ -1,0 +1,16 @@
+.container {
+    position: relative;
+    margin: 2rem auto;
+    width: 600px;
+    padding-top: 3rem   ;
+
+    .btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    table {
+        width: 100%;
+    }
+}

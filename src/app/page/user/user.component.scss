@@ -1,0 +1,16 @@
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 4rem auto;
+
+    img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .btn {
+        margin: 1rem auto 0;
+        min-width: 50%;
+    }
+}

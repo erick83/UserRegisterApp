@@ -17,5 +17,4 @@ export class UsersComponent implements OnInit {
   ngOnInit(): void {
     this.users$ = this.apiService.getUsers();
   }
-
 }

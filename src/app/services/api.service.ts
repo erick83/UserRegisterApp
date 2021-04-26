@@ -19,4 +19,12 @@ export class ApiService {
   getUser(id: string): Observable<IUser> {
     return this.http.get(this.baseUrl + '/api/User/' + id) as Observable<IUser>;
   }
+
+  createUser(user: IUser) {
+    return this.http.post(this.baseUrl + '/api/User', user) as Observable<IUser>;
+  }
+
+  updateUser(user: IUser) {
+    return this.http.put(this.baseUrl + '/api/User/' + user.id, user) as Observable<IUser>;
+  }
 }
